@@ -1,0 +1,78 @@
+* {
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: #025468 #ffffff;;
+}
+
+/* toastify-color-progress-light: linear-gradient( to right, #4cd964, #5ac8fa, #007aff, #34aadc, #5856d6, #ff2d55 ); */
+
+.ani-scroll {
+    text-wrap: nowrap;
+    position: relative;
+    animation: scrollhori 5s infinite linear;
+}
+
+@keyframes scrollhori {
+    0%   {background-color:rgb(255, 255, 255); left:100%; top:0px;}
+    25%  {background-color:rgb(82, 155, 82); color: rgb(255, 255, 255); left:0%; top:0px;}
+    50%  {background-color:rgb(82, 155, 82); color: rgb(255, 255, 255); left:-50%; top:0;}
+    75%  {background-color:rgb(82, 155, 82); color: rgb(255, 255, 255); left:-100%; top:0;}
+    100% {background-color:rgb(255, 255, 255); left:-150%; top:0px;}
+    
+}
+
+/* Used in Projects */
+.anim {
+    position: relative;
+    animation: scrollhoriz 5s linear;
+}
+
+@keyframes scrollhoriz {
+    0%   {left:100%; top:100px;}
+    25%  {left:75%; top:0px;}
+    50%  {left:50%; top:0;}
+    75%  {left:25%; top:0;}
+    100% {left:0%; top:0px;}
+    
+}
+
+.bgImgWelcome {
+    background-image: linear-gradient(
+                            0deg, 
+                            rgba(0,0,0,0.7), 
+                            rgba(0,0,0,0.9)
+                        ), 
+                        url("./assets/img/welcome/Background.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+.bgImgContact {
+    background-image: linear-gradient(
+                            0deg, 
+                            rgba(0, 255, 251, 0.4), 
+                            rgba(0,0,0,0.7)
+                        ), 
+                        url("./assets/img/contact/Background-contact.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat; 
+}
+
+
+.hide {
+    opacity: 0;
+    transition: all 1s;
+
+}
+
+.show {
+    opacity: 1;
+    transition: all 2s;
+}
+
+
+option:hover {
+    background-color: none;
+}
