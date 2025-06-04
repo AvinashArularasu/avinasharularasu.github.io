@@ -83,10 +83,17 @@ export function Menubar() {
 
 // Different colour theme selection
 function Themecolor() {
-    const { colorTheme, setColorTheme } = UseAppContext();
+    const { colorTheme, setColorTheme,
+        bgGradFromColorTheme, bgGradToColorTheme
+     } = UseAppContext();
     return (
         <>
-            <label className="text-slate-100">ThemeColor</label>
+            <label 
+                className="text-slate-100"
+                style={ {backgroundImage: `linear-gradient(180deg, ${bgGradFromColorTheme}, ${bgGradToColorTheme})`} }
+            >
+                ThemeColor
+            </label>
             <select 
                 value={colorTheme}
                 onChange={(e) => setColorTheme(e.target.value)}
