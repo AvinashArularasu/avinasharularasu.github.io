@@ -300,7 +300,7 @@ export function ProjectDetail() {
                 <ProjectDetailCard
                     title="Portfolio-Avinash Arularasu"
                     sub="Focussed on the Contents of Myself and ThemeSetting and Responsiveness and Interactive design"
-                    url="https://avinasharularasu.netlify.app/"
+                    url="https://avinasharularasu.github.io/"
                     giturlfrontend="https://github.com/Vimalnash/avinasharularasu-pf-frontend"
                     giturlbackend="https://github.com/Vimalnash/avinasharularasu-pf-backend"
                     implementlist={

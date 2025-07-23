@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { UseAppContext } from "../Context/AppContext";
+import { useNavigate } from "react-router-dom";
 // import imgProfilePhoto from "../assets/img/welcome/Avinash-ProfilePhoto.jpg";
 
 // Welcome View
@@ -8,7 +9,9 @@ export function Welcome() {
     const {
         bgColorTheme,
         bgHoverColorTheme,
-        borderColorTheme } = UseAppContext();
+        borderColorTheme, 
+        setLoadingTrue } = UseAppContext();
+    const navigate = useNavigate();
 
     useEffect(() =>{
         setShowClass(true)
@@ -27,16 +30,21 @@ export function Welcome() {
                         </div>
                     </div>
                     <div className="">
-                        <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank">
+                        {/* <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank"> */}
                             <button 
                             onMouseEnter={(e) => {e.target.style.backgroundColor = bgHoverColorTheme, e.target.style.color = "white"}}
                             onMouseLeave={(e) => {e.target.style.backgroundColor = bgColorTheme, e.target.style.color = "black"}}
                             style={ {backgroundColor: bgColorTheme, hover:bgHoverColorTheme} }
                             className={`px-6 py-2 text-black rounded-xl btn hover:scale-110 ease-in-out transition-all duration-300`}
+                            onClick={() => { 
+                                setLoadingTrue(true); 
+                                navigate(`/resume`) 
+                            }}
                             >
-                                Download Resume
+                                {/* Download Resume */}
+                                View Resume
                             </button>
-                        </a>
+                        {/* </a> */}
                     </div>
                 </div>
                 {/* <div className="w-full lg:w-2/4 p-5  flex flex-col justify-center items-center gap-10">

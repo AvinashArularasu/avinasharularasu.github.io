@@ -4,6 +4,7 @@ import { RiLinkedinBoxFill } from "react-icons/ri";
 import { UseAppContext } from "../Context/AppContext";
 import { baseurl, userurl } from "../Handlers/BackendUrls";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 // Contact Section
 export function Contact() {
@@ -13,12 +14,14 @@ export function Contact() {
         bgGradFromColorTheme,
         bgGradToColorTheme,
         outlineColorTheme,
-        borderColorTheme,ShadowColorTheme } = UseAppContext();
+        borderColorTheme,ShadowColorTheme, setLoadingTrue } = UseAppContext();
     const [successMessage, setSuccessMessage] = useState("");
     const [failureMessage, setFailureMessage] = useState("");
     const [successEmailMessage, setSuccessEmailMessage] = useState("");
     const [failureEmailMessage, setFailureEmailMessage] = useState("");
     const [Loading, setLoading] = useState(false);
+
+    const navigate = useNavigate();
 
     const initVal = {
         userName: "",
@@ -211,15 +214,20 @@ export function Contact() {
                             </a>
                         </p>
                         <div className="">
-                            <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank">
+                            {/* <a href="https://drive.google.com/file/d/1ltTSlwuqROBw5zYsjAd4LrVOMXIV1BA4/view?usp=drive_link" target="_blank"> */}
                                 <button 
                                 onMouseEnter={(e) => {e.target.style.backgroundColor = bgHoverColorTheme, e.target.style.color = "white"}}
                                 onMouseLeave={(e) => {e.target.style.backgroundColor = bgColorTheme, e.target.style.color = "black"}}
                                 style={ {backgroundColor: bgColorTheme } }
-                                className="px-6 py-2 text-black rounded-xl btn hover:scale-110 ease-in-out transition-all duration-300">
-                                    Download Resume
+                                className="px-6 py-2 text-black rounded-xl btn hover:scale-110 ease-in-out transition-all duration-300"
+                                onClick={() => { 
+                                    setLoadingTrue(true); 
+                                    navigate(`/resume`) 
+                                }}
+                                >
+                                    View Resume
                                 </button>
-                            </a>
+                            {/* </a> */}
                         </div>
                     </div>
                 </div>

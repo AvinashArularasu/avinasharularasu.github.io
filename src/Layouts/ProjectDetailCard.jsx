@@ -52,7 +52,7 @@ export function ProjectDetailCard(props) {
                     Have a lookout - Click to View
                 </a>
             </div>
-            <div className="text-lg text-start font-semibold uppercase underline">
+            {/* <div className="text-lg text-start font-semibold uppercase underline">
                 <a 
                     href={`${props.giturlfrontend}`} 
                     target="_blank"
@@ -69,7 +69,7 @@ export function ProjectDetailCard(props) {
                 >
                     GitHub-Backend - Click to View
                 </a>
-            </div>
+            </div> */}
         </div>
     )
 };

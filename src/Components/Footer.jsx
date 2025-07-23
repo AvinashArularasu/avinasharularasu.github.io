@@ -45,7 +45,7 @@ export function Footer() {
                                 <RiGithubFill size={24} className="" />
                                 <a 
                                     class="badge-base__link LI-simple-link" 
-                                    href="https://github.com/Vimalnash" 
+                                    href="https://avinasharularasu.github.io/" 
                                     target="_blank">
                                     Github
                                 </a>
