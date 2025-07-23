@@ -11,6 +11,7 @@ export function Welcome() {
         bgHoverColorTheme,
         borderColorTheme, 
         setLoadingTrue } = UseAppContext();
+        
     const navigate = useNavigate();
 
     useEffect(() =>{
