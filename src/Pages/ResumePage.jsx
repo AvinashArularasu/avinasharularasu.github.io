@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { UseAppContext } from "../Context/AppContext";
 
-export function Resume() {
+export function ResumePage() {
   const {
       bgGradFromColorTheme,
       bgGradToColorTheme,

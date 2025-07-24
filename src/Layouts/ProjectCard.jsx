@@ -19,7 +19,7 @@ export function ProjectCard(props) {
 
     return (
         <div         
-        style={ {borderColor: borderColorTheme, boxShadow: `0px 0px 5px 5px ${ShadowColorTheme}`} }
+        style={ { borderColor: borderColorTheme, boxShadow: `0px 0px 5px 2px ${ShadowColorTheme}`} }
         className={`w-full border-[3px] flex flex-col rounded-xl transition-all ease-in-out duration-300 shadow-xl lg:w-[300px]`}>
             <div className="">
                 <h2 className="rounded-t-lg p-2 text-lg uppercase font-semibold text-center border-b-2 border-gray-200 shadow-[inset_0px_0px_5px_3px_#f2f2f2]">

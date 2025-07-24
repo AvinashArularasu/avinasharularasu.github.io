@@ -3,9 +3,10 @@ import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import { HomePage } from './Pages/HomePage'
 import { UseAppContext } from './Context/AppContext'
-import { ProjectDetail } from './Components/ProjectDetail';
+import { ProjectDetailPage } from './Pages/ProjectDetailPage';
 import { Loader } from './Components/Loader';
-import { Resume } from './Components/Resume';
+import { ResumePage } from './Pages/ResumePage';
+import { ProjectsPage } from './Pages/ProjectsPage';
 
 function App() {
   const {theme, LoadingTrue, setLoadingTrue} = UseAppContext();
@@ -27,8 +28,9 @@ function App() {
         <div>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/project/:projDetail" element={<ProjectDetail />} />
-            <Route exact path="/resume" element={<Resume />} />
+            <Route path="/project/:projDetail" element={<ProjectDetailPage />} />
+            <Route exact path="/resume" element={<ResumePage />} />
+            <Route exact path="/projects" element={<ProjectsPage />} />
           </Routes>
         </div>
         )

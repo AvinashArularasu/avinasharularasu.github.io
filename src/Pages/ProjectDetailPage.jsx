@@ -3,7 +3,7 @@ import { ProjectDetailCard } from "../Layouts/ProjectDetailCard";
 import { UseAppContext } from "../Context/AppContext";
 
 // Project Details Page display based on Project clicked
-export function ProjectDetail() {
+export function ProjectDetailPage() {
     const projectNameUrlParamObj = useParams();
     const projTitleParam = projectNameUrlParamObj.projDetail;
     const navigate = useNavigate();
@@ -21,13 +21,19 @@ export function ProjectDetail() {
         <div>
         <div 
         style={ {backgroundImage: `linear-gradient(180deg, ${bgGradFromColorTheme}, ${bgGradToColorTheme})`} }        
-        className="flex flex-row justify-center items-center w-full z-40 h-12 text-white text-xl font-semibold sticky top-0 left-0 right-0">
+        className="flex flex-row justify-center items-center gap-2 w-full z-40 h-12 text-white text-xl font-semibold sticky top-0 left-0 right-0">
             <a 
                 className="hover:text-orange-300 hover:scale-110 ease-in-out duration-300 cursor-pointer" 
                 onClick={() => {navigate("/")}}
                 href="#projects"
             >
-                &larr;GoBack
+                &larr;GoHomePage
+            </a>
+            <a 
+                className="hover:text-orange-300 hover:scale-110 ease-in-out duration-300 cursor-pointer" 
+                onClick={() => {navigate("/projects")}}
+            >
+                &larr;GoProjectsPage
             </a>
         </div>
 
@@ -435,6 +441,201 @@ export function ProjectDetail() {
                 </ProjectDetailCard>
             ):("")
         }
+        {
+            projTitleParam == "gtd19-rpt-crudformik" ?
+            (       
+                <ProjectDetailCard
+                    title="crudformik"
+                    sub="Used React Formik for Form Entry Operation"
+                    url="https://gtd19-rpt-crudformik.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>Reactjs</li>
+                            <li>CSS-Tailwind</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "assign-mentor-gtd27" ?
+            (       
+                <ProjectDetailCard
+                    title="assign-mentor"
+                    sub="Create Student,Mentor and AssignStudent to a Mentor using one to one or Many to One"
+                    url="https://assign-mentor-gtd27.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>Reactjs</li>
+                            <li>CSS-Tailwind</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "gtd18-rpt-cruduserdata" ?
+            (       
+                <ProjectDetailCard
+                    title="cruduserdata"
+                    sub="CRUD Operation for User Form"
+                    url="https://gtd18-rpt-cruduserdata.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>Reactjs</li>
+                            <li>CSS-Tailwind</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "gtd15-rpt-ToDos" ?
+            (       
+                <ProjectDetailCard
+                    title="ToDos"
+                    sub="ToDo Task List Create, Edit and delete tasks and update Status completed"
+                    url="https://gtd15-rpt-crud.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>Reactjs</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "gtd12-api-1" ?
+            (       
+                <ProjectDetailCard
+                    title="API"
+                    sub="Used API for Data Rendering"
+                    url="https://gtd12-api-1.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>html5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "gtd12-api-2" ?
+            (       
+                <ProjectDetailCard
+                    title="API"
+                    sub="Used API for Data Rendering"
+                    url="https://gtd12-api-2.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>html5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "gtd12-api-3" ?
+            (       
+                <ProjectDetailCard
+                    title="API"
+                    sub="Used API for Data Rendering"
+                    url="https://gtd12-api-3.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>html5</li>
+                            <li>CSS3</li>
+                            <li>JavaScript</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+        {
+            projTitleParam == "hrmlabour" ?
+            (       
+                <ProjectDetailCard
+                    title="HRM-AttendanceShift"
+                    sub="Mark Attendance and Assign Shift"
+                    url="https://hrmlabour.netlify.app/"
+                    giturlfrontend=""
+                    giturlbackend=""
+                    implementlist={
+                        <ul className="flex flex-col flex-wrap gap-4 list-disc list-inside md:flex-row md:gap-8">
+                            <li>React.js</li>
+                            <li>CSS-Tailwind</li>
+                        </ul>
+                    }
+                >
+                <>
+                    <ul className="list-disc list-inside">
+                        <li></li>
+                    </ul>
+                </>
+                </ProjectDetailCard>
+            ):("")
+        }
+
         </div>
     )
 };

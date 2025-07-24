@@ -24,7 +24,7 @@
 /* Used in Projects */
 .anim {
     position: relative;
-    animation: scrollhoriz 5s linear;
+    animation: scrollhoriz 2s linear;
 }
 
 @keyframes scrollhoriz {

@@ -5,8 +5,13 @@ import imgEcommerceApp from "../assets/img/projImages/E-Commerce/E-CommerceLandi
 import imgProductPaginationApp from "../assets/img/projImages/ProductListing/ProductListingLandingPage.jpg";
 import imgPortfolio from "../assets/img/projImages/Portfolio-AvinashArularasu/PortfolioLandingPage.jpg";
 import imgMovieBrowser from "../assets/img/projImages/MovieBrowser/SearchPage.jpg";
+import { useNavigate } from "react-router-dom";
+import { UseAppContext } from "../Context/AppContext";
 
 export function Projects() {
+    const {setLoadingTrue } = UseAppContext();
+    const navigate = useNavigate();
+    
     return (
         <div id="projects" 
             className="overflow-x-auto min-h-screen pt-16 bg-gradient-to-l from-base-100 to-base-200 tracking-wide "
@@ -52,6 +57,18 @@ export function Projects() {
                         page="MovieBrowser"
                     />
             </div>
+            <h3 className="mb-10 text-4xl font-semibold text-center">
+                <button 
+                    className="px-4 underline text-blue-400 hover:scale-110 ease-in-out transition-all duration-300"
+                    onClick={() => { 
+                        setLoadingTrue(true); 
+                        navigate(`/projects`) 
+                    }}
+                >
+                    Click to see More Projects
+                </button>
+                
+            </h3>
         </div>
     )
 }
